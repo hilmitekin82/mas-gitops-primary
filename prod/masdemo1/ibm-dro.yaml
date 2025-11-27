@@ -1,9 +1,0 @@
-merge-key: "prod/masdemo1"
-
-ibm_dro:
-    dro_namespace: ibm-software-central
-    ibm_entitlement_key: "<path:arn:aws:secretsmanager:us-east-1:149536496842:secret:prod/masdemo1/ibm_entitlement#entitlement_key>"
-    run_sync_hooks: true
-    dro_cmm_setup: 
-    dro_install_plan: Automatic
-    imo_install_plan: Automatic

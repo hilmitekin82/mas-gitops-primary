@@ -16,14 +16,14 @@ ibm_sls:
   sls_mongo_username: "<path:arn:aws:secretsmanager:us-east-1:149536496842:secret:prod/masdemo1/inst1/mongo#username>"
   sls_mongo_password: "<path:arn:aws:secretsmanager:us-east-1:149536496842:secret:prod/masdemo1/inst1/mongo#password>"
 
-  sls_mongo_secret_name: sls-mongo-credentials
+  sls_mongo_secret_name: sls-mongo-credentials2
   icr_cp_open: icr.io/cpopen
   sls_install_plan: Automatic
   run_sync_hooks: true
   mongo_spec:
     authMechanism: DEFAULT
     configDb: admin
-    secretName: sls-mongo-credentials
+    secretName: sls-mongo-credentials2
     nodes:
       - host: mas-mongo-ce-0.mas-mongo-ce-svc.mongoce.svc.cluster.local
         port: 27017

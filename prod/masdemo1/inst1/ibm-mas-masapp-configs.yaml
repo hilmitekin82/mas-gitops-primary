@@ -1,0 +1,42 @@
+merge-key: "prod/masdemo1/inst1"
+ibm_mas_masapp_configs:
+  - mas_app_id: manage
+    mas_app_namespace: mas-inst1-manage
+    mas_app_ws_apiversion: apps.mas.ibm.com/v1
+    mas_app_ws_kind: ManageWorkspace
+    mas_workspace_id: inst1ws1
+    mas_appws_spec:
+      bindings:
+        jdbc: workspace-application
+      components:
+        base:
+          version: latest
+        health:
+          version: latest
+      settings:
+        aio:
+          install: true
+        db:
+          dbSchema: maximo
+          maxinst:
+            demodata: true
+            db2Vargraphic: true
+            tableSpace: MAXDATA
+            indexSpace: MAXINDEX
+            bypassUpgradeVersionCheck: false
+        customizationList:
+        deployment:
+          persistentVolumes: []
+          serverBundles:
+            - bundleType: all
+              isDefault: true
+              isMobileTarget: true
+              isUserSyncTarget: true
+              name: all
+              replica: 1
+              routeSubDomain: all
+        languages:
+          baseLang: EN
+          secondaryLangs: []
+    mas_manual_cert_mgmt: false
+    run_sanity_test: false
